@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Me to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wind the Handle to Play My Voice</h1>
+        
+        <div class="music-box">
+            <!-- Polaroid removed -->
+            
+            <!-- The waveform visualization -->
+            <div class="waveform-container">
+                <canvas id="waveform"></canvas>
+            </div>
+            
+            <!-- The winding handle -->
+            <div class="handle-container">
+                <div class="handle" id="handle">
+                    <div class="handle-center"></div>
+                    <div class="handle-grip"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <p id="status">Click and drag the handle in circles to play</p>
+            <p id="timer">0:00 / 0:00</p>
+        </div>
+    </div>
+    
+    <audio id="audio" src="assets/voice.mp3.m4a" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
