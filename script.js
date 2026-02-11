@@ -85,7 +85,7 @@ function updatePlayback() {
         if (Math.abs(rotationSpeed) < 0.5) {
             rotationSpeed = 0;
             audio.pause();
-            if (polaroid) polaroid.classList.remove('playing');
+            polaroid.classList.remove('playing');
             status.textContent = 'Keep winding to play!';
         }
     }
@@ -99,7 +99,7 @@ function updatePlayback() {
             audio.play().catch(() => {});
         }
         
-        if (polaroid) polaroid.classList.add('playing');
+        polaroid.classList.add('playing');
         status.textContent = rotationSpeed > 8 ? '🔥 Winding fast!' : '♪ Playing...';
     }
     
@@ -170,7 +170,7 @@ document.addEventListener('touchend', stopDragging);
 
 // Audio ended
 audio.addEventListener('ended', () => {
-    if (polaroid) polaroid.classList.remove('playing');
+    polaroid.classList.remove('playing');
     status.textContent = 'Finished! Wind again to replay';
 });
 
